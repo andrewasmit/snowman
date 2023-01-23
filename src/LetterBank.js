@@ -12,7 +12,6 @@ function LetterBank({ word }){
         return <Letter letter={e.toUpperCase()} key={i} answer="red-letter"/>
     })
 
-    console.log(wordLetters)
     
 
 
