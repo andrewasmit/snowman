@@ -1,10 +1,10 @@
 
 
-function Letter({ letter }){
+function Letter({ letter, answer }){
 
     // Return of JSX
     return(
-        <div className="letter" id={letter}>
+        <div id={letter} className={answer}>
             <h3 onClick={()=>console.log({letter}," was clicked!")}>{letter}</h3>
         </div>
     )

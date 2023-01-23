@@ -29,7 +29,7 @@ function App() {
       <Header />
       <Word word={word}/>
       <Snowman />
-      <LetterBank />
+      <LetterBank word={word} />
     </div>
   );
 }

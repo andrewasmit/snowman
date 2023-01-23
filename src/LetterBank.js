@@ -2,11 +2,18 @@ import Letter from "./Letter";
 
 const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-function LetterBank(){
+function LetterBank({ word }){
 
+    const wordLetters = word.split('')
     const lettersToDisplay = alphabet.map((e,i)=>{
-        return <Letter letter={e.toUpperCase()} key={i}/>
+        if (wordLetters.includes(e)){
+            return <Letter letter={e.toUpperCase()} key={i} answer="green-letter"/>
+        }else
+        return <Letter letter={e.toUpperCase()} key={i} answer="red-letter"/>
     })
+
+    console.log(wordLetters)
+    
 
 
     // Return of JSX
