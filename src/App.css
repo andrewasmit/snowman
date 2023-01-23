@@ -41,3 +41,8 @@
 #snowman{
   border: 15px solid blue;
 }
+
+.letter{
+  display: inline-block;
+  margin: 15px;
+}
