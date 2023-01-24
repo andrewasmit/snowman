@@ -1,8 +1,8 @@
 import './App.css';
-import Header from './Header';
-import Snowman from './Snowman';
-import Word from './Word';
-import LetterBank from './LetterBank';
+import Header from './components/Header';
+import Snowman from './components/Snowman';
+import Word from './components/Word';
+import LetterBank from './components/LetterBank';
 import { useState, useEffect } from 'react'
 
 function App() {
