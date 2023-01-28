@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Letter({ letter, answer, count, setCount }){
+function Letter({ letter, answer, count, setCount, handleDisplayWrongLetters }){
 
 const [chosen, setChosen] = useState(false)
 
@@ -9,6 +9,7 @@ const [chosen, setChosen] = useState(false)
         setChosen(true)
         if (answer === "red-letter"){
             setCount(count +=1)
+            handleDisplayWrongLetters(letter)
         }
         console.log(count)
     }
