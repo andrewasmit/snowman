@@ -1,12 +1,16 @@
 import { useState } from 'react'
 
-function Letter({ letter, answer }){
+function Letter({ letter, answer, count, setCount }){
 
 const [chosen, setChosen] = useState(false)
 
     function handleClickLetter(){
         // console.log({letter})
         setChosen(true)
+        if (answer === "red-letter"){
+            setCount(count +=1)
+        }
+        console.log(count)
     }
 
 

@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 function App() {
 
   const [word, setWord] = useState('') 
+  const [count, setCount] = useState(0)
 
   useEffect(()=>{
     const options = {
@@ -28,8 +29,8 @@ function App() {
     <div className="App">
       <Header />
       <Word word={word}/>
-      <Snowman />
-      <LetterBank word={word} />
+      <Snowman count={count}/>
+      <LetterBank word={word} count={count} setCount={setCount}/>
     </div>
   );
 }
