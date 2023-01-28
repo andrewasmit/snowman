@@ -17,6 +17,12 @@
   border: 15px solid blue;
 }
 
+.default-letter{
+  color: black;
+  display: inline-block;
+  margin: 12px;
+}
+
 .red-letter{
   color: red;
   display: inline-block;

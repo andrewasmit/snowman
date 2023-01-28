@@ -5,12 +5,14 @@ function Letter({ letter, answer }){
 const [chosen, setChosen] = useState(false)
 
     function handleClickLetter(){
-        console.log({letter})
+        // console.log({letter})
+        setChosen(true)
     }
+
 
     // Return of JSX
     return(
-        <div id={letter} className={answer} onClick={handleClickLetter}>
+        <div id={letter} className={ chosen ? answer : "default-letter"} onClick={handleClickLetter}>
             <h3>{letter}</h3>
         </div>
     )
