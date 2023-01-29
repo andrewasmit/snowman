@@ -21,21 +21,25 @@
   color: black;
   display: inline-block;
   margin: 12px;
+  cursor: pointer;
 }
 .default-letter{
   color: black;
   display: inline-block;
   margin: 12px;
+  cursor: pointer;
 }
 
 .red-letter{
   color: red;
   display: inline-block;
   margin: 12px;
+  cursor: pointer;
 }
 
 .green-letter{
   color: green;
   display: inline-block;
   margin: 12px;
+  cursor: pointer;
 }

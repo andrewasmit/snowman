@@ -48,6 +48,7 @@ function LetterBank({ word, count, setCount, selectedLetters, setSelectedLetters
             <h4>Wrong Letters Chosen</h4>
             {wrongLettersToDisplay}
             <br></br>
+            <h4>Letter Bank</h4>
             {lettersToDisplay}
         </div>
     )

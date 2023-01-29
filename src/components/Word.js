@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
 
-function Word({ word, selectedLetters }){
+function Word({ word, selectedLetters, setWin }){
 
     const wordArr= word.split('')
     const [letterUnderscores, setLetterUnderscores] = useState([]);
@@ -14,13 +14,22 @@ function Word({ word, selectedLetters }){
          }))
     };
 
-
     useEffect(()=>{ renderUnderscores() }, [selectedLetters, word])
-    // console.log(selectedLetters)
 
+    function checkForWin(){
+        if(letterUnderscores.includes("__")){
+            return false
+        } else
+        setWin(true)
+    }
+console.log(letterUnderscores)
+    useEffect(()=>{ checkForWin() }, [selectedLetters, word])
+
+
+    // Return of JSX
     return(
         <div>
-            <h1>{word}</h1>
+            <h1>The answer is: "{word}"</h1>
             {letterUnderscores}
         </div>
     )
