@@ -11,6 +11,8 @@ function App() {
   const [count, setCount] = useState(0);
   const [selectedLetters, setSelectedLetters] = useState([]);
 
+  // console.log(selectedLetters)
+
   useEffect(()=>{
     const options = {
     method: 'GET',
@@ -26,12 +28,21 @@ function App() {
     .catch(err => console.error(err));
   }, []);
 
+  console.log(word)
+
+  // return of JSX
   return (
     <div className="App">
       <Header />
       <Word word={word} selectedLetters={selectedLetters}/>
       <Snowman count={count}/>
-      <LetterBank word={word} count={count} setCount={setCount} selectedLetters={selectedLetters} setSelectedLetters={setSelectedLetters}/>
+      <LetterBank 
+          word={word} 
+          count={count} 
+          setCount={setCount} 
+          selectedLetters={selectedLetters} 
+          setSelectedLetters={setSelectedLetters}
+        />
     </div>
   );
 }
