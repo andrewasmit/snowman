@@ -1,17 +1,17 @@
 import { useState } from 'react'
 
-function Letter({ letter, answer, count, setCount, handleDisplayWrongLetters }){
+function Letter({ letter, answer, count, setCount, handleDisplayWrongLetters, selectedLetters, setSelectedLetters }){
 
 const [chosen, setChosen] = useState(false)
 
     function handleClickLetter(){
-        // console.log({letter})
         setChosen(true)
         if (answer === "red-letter"){
             setCount(count +=1)
             handleDisplayWrongLetters(letter)
         }
         console.log(count)
+        setSelectedLetters([...selectedLetters, letter])
     }
 
 

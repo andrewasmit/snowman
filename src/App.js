@@ -7,8 +7,9 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
-  const [word, setWord] = useState('') 
-  const [count, setCount] = useState(0)
+  const [word, setWord] = useState('');
+  const [count, setCount] = useState(0);
+  const [selectedLetters, setSelectedLetters] = useState([]);
 
   useEffect(()=>{
     const options = {
@@ -28,9 +29,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Word word={word}/>
+      <Word word={word} selectedLetters={selectedLetters}/>
       <Snowman count={count}/>
-      <LetterBank word={word} count={count} setCount={setCount}/>
+      <LetterBank word={word} count={count} setCount={setCount} selectedLetters={selectedLetters} setSelectedLetters={setSelectedLetters}/>
     </div>
   );
 }

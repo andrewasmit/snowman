@@ -17,6 +17,11 @@
   border: 15px solid blue;
 }
 
+.display-letter{
+  color: black;
+  display: inline-block;
+  margin: 12px;
+}
 .default-letter{
   color: black;
   display: inline-block;
