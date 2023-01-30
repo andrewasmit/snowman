@@ -3,71 +3,127 @@
 function Snowman({ count }){
     return(
         <div id='snowman'>
-            <span>THIS IS WHERE THE SNOWMAN GOES</span>
             <h3>{count} wrong guesses</h3>
-            <svg width="500" height="500" viewBox="-250 -250 250 250">
-                <circle cx ="400" cy="445" r="126" fill="#335693"/>
-                <g
-                    transform="translate(0,20)"
-                    fill= "White"
+            <svg width="300" height="300" viewBox="-100 -100 200 200">
+
+                {/* Lowest Body */}
+                <circle 
+                    cx ="0" 
+                    cy="55" 
+                    r="40" 
+                    fill="#fff"
                     stroke="#335693"
-                    stroke-width="5"
-                >
-                    
-                </g>
+                    stroke-width="3"
+                />
+
+                {/* Middle Body */}
+                <circle 
+                    cx ="0" 
+                    cy="12" 
+                    r="32" 
+                    fill="#fff"
+                    stroke="#335693"
+                    stroke-width="3"
+                />
+
+                {/* Head / Body */}
+                <circle 
+                    cx ="0" 
+                    cy="-28" 
+                    r="25" 
+                    fill="#fff"
+                    stroke="#335693"
+                    stroke-width="3"
+                />
+
+                {/* RIGHT Arm */}
+                <rect 
+                    x="20" 
+                    y="8" 
+                    width="40" 
+                    height="4" 
+                    fill="#987758" 
+                />
+
+                {/* LEFT Arm */}
+                <rect 
+                    x="-60" 
+                    y="8" 
+                    width="40" 
+                    height="4" 
+                    fill="#987758" 
+                />
+
+                {/* FACE */}
+                {/* Left Eye */}
+                <circle 
+                    cx ="-7" 
+                    cy="-37" 
+                    r="4" 
+                    fill="#000"
+                />
+                {/*  Right Eye*/}
+                <circle 
+                    cx ="8" 
+                    cy="-37" 
+                    r="4" 
+                    fill="#000"
+                />
+                {/* Mouth 4 */}
+                <circle 
+                    cx ="15" 
+                    cy="-17" 
+                    r="2.5" 
+                    fill="#000"
+                />
+                {/* Mouth 3 */}
+                <circle 
+                    cx ="7" 
+                    cy="-13.5" 
+                    r="2.5" 
+                    fill="#000"
+                />
+                {/* Mouth 2 */}
+                <circle 
+                    cx ="-2" 
+                    cy="-12" 
+                    r="2.5" 
+                    fill="#000"
+                />
+                {/* Mouth 1 */}
+                <circle 
+                    cx ="-11.5" 
+                    cy="-15" 
+                    r="2.5" 
+                    fill="#000"
+                />
+
+                {/* Carrot Nose */}
+                <polygon 
+                    points="-2, -22 0, -27 40, -26 "
+                    fill="#fa1"
+                />
+
+                {/* Top hat/Bottom */}
+                <rect 
+                    x="-30" 
+                    y="-55" 
+                    width="60" 
+                    height="5" 
+                    fill="#000" 
+                />
+                {/* Top hat/TOP */}
+                <rect 
+                    x="-18" 
+                    y="-75" 
+                    width="35" 
+                    height="25" 
+                    fill="#000" 
+                />
+                
             </svg>
         </div>
     )
 }
 
 export default Snowman;
-
-// BODY
-// stroke("#335693");
-// strokeWeight(1);
-// FileList("White");
-// circle(400, 445, 126);
-// circle(400, 285, 99);
-// circle(400, 151, 68);
-
-// RIGHT ARM
-// stroke("#843c0c")
-// strokeWeight(10);
-// line(604, 359, 495, 291)
-// line(604, 359, 607, 378)
-// line(604, 359, 627, 367)
-// line(604, 359, 627, 355)
-
-// LEFT ARM
-// stroke("#843c0c")
-// strokeWeight(10);
-// line(225, 168, 323, 265)
-// line(225, 168, 196, 171)
-// line(225, 168, 201, 157)
-// line(225, 168, 216, 135)
-
-// EYES
-// fill("black")
-// noStroke();
-// circle(336, 124, 10)
-// circle(428, 124, 10)
-
-// MOUTH
-// circle(362, 124, 6);
-// circle(379, 197, 6);
-// circle(403, 201, 6);
-// circle(428, 199, 6);
-
-// BUTTONS
-// circle(407, 267, 10);
-// circle(407, 320, 10);
-// circle(407, 433, 10);
-// circle(407, 502, 10);
-
-// NOSE
-// fill("#ffa359")
-// triangle(397, 161, 401, 176, 483, 146);
-
-// HAT
-// fill("#c55a11")
-// triangle(321, 125, 353, 39, 434, 73);
