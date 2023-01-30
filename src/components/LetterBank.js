@@ -3,7 +3,16 @@ import { useState } from "react";
 
 const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-function LetterBank({ word, count, setCount, selectedLetters, setSelectedLetters }){
+function LetterBank({ 
+        word, 
+        count, 
+        setCount, 
+        selectedLetters, 
+        setSelectedLetters, 
+        win,
+        lose
+    }){
+
 
     const [wrongLetters, setWrongLetters] = useState([]);
     function handleDisplayWrongLetters(letter){
@@ -27,6 +36,8 @@ function LetterBank({ word, count, setCount, selectedLetters, setSelectedLetters
                         handleDisplayWrongLetters={handleDisplayWrongLetters}
                         selectedLetters={selectedLetters} 
                         setSelectedLetters={setSelectedLetters}
+                        win={win}
+                        lose={lose}
                     />
         }else
             return <Letter 
@@ -38,6 +49,8 @@ function LetterBank({ word, count, setCount, selectedLetters, setSelectedLetters
                         handleDisplayWrongLetters={handleDisplayWrongLetters}
                         selectedLetters={selectedLetters} 
                         setSelectedLetters={setSelectedLetters}
+                        win={win}
+                        lose={lose}
                     />
     })
 

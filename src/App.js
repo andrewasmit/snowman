@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [selectedLetters, setSelectedLetters] = useState([]);
   const [win, setWin] = useState(false)
+  const [lose, setLose] = useState(false)
 
   useEffect(()=>{
     const options = {
@@ -28,6 +29,7 @@ function App() {
   }, []);
 
   console.log(win)
+  console.log(lose)
 
   // return of JSX
   return (
@@ -37,9 +39,13 @@ function App() {
           word={word} 
           selectedLetters={selectedLetters} 
           setWin={setWin}
+          count={count}
+          setLose={setLose}
         />
       <Snowman count={count}/>
       <LetterBank 
+          win={win}
+          lose={lose}
           word={word} 
           count={count} 
           setCount={setCount} 

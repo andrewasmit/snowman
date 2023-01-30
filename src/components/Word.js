@@ -1,11 +1,11 @@
 import {useEffect, useState } from 'react'
 
-function Word({ word, selectedLetters, setWin }){
+function Word({ word, selectedLetters, setWin, count, setLose }){
 
     const wordArr= word.split('')
     const [letterUnderscores, setLetterUnderscores] = useState([]);
 
-    function checkForWin(){
+    function checkForWinLoss(){
         const checkArr = letterUnderscores.map(e=>{
             if(e.props.children === "__"){
                 return "NO";
@@ -13,11 +13,14 @@ function Word({ word, selectedLetters, setWin }){
                 return e.props.children;
             }
         })
-        console.log(checkArr)
         if(checkArr.includes("NO") || checkArr.length===0){
-            console.log("No win yet")
+            // console.log("No win yet")
         }else{
             setWin(true)
+        };
+
+        if(count ===6){
+            setLose(true)
         }
     };
 
@@ -32,12 +35,9 @@ function Word({ word, selectedLetters, setWin }){
     };
 
     useEffect(()=>{ renderUnderscores() }, [selectedLetters, word])
-    useEffect(()=>{ checkForWin(); }, [letterUnderscores])
+    useEffect(()=>{ checkForWinLoss(); }, [letterUnderscores])
 
     
-
-
-
     // Return of JSX
     return(
         <div>
