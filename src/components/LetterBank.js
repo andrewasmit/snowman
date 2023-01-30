@@ -10,20 +10,11 @@ function LetterBank({
         selectedLetters, 
         setSelectedLetters, 
         win,
-        lose
+        lose,
+        handleDisplayWrongLetters
     }){
 
-
-    const [wrongLetters, setWrongLetters] = useState([]);
-    function handleDisplayWrongLetters(letter){
-        setWrongLetters([...wrongLetters, letter])
-    }
-    
-    const wrongLettersToDisplay = wrongLetters.map((letter, i)=>{
-        return <h4 key={i}className="display-letter">{letter.toUpperCase()}</h4>
-    })
-
-    
+        
     const wordLetters = word.split('');
     const lettersToDisplay = alphabet.map((e,i)=>{
         if (wordLetters.includes(e)){
@@ -58,9 +49,6 @@ function LetterBank({
     // Return of JSX
     return(
         <div id="letter-bank">
-            <h4>Wrong Letters Chosen</h4>
-            {wrongLettersToDisplay}
-            <br></br>
             <h4>Letter Bank</h4>
             {lettersToDisplay}
         </div>

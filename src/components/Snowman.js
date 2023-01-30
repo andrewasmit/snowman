@@ -1,10 +1,13 @@
 
 
 function Snowman({ count }){
+
+
     return(
-        <div id='snowman'>
+        <div id='snowman'className="split-screen">
             <h3>{count} wrong guesses</h3>
             <svg width="300" height="300" viewBox="-100 -100 200 200">
+
 
                 {/* Lowest Body */}
                 <circle 
@@ -13,7 +16,7 @@ function Snowman({ count }){
                     r="40" 
                     fill="#fff"
                     stroke="#335693"
-                    stroke-width="3"
+                    strokeWidth="3"
                 />
 
                 {/* Middle Body */}
@@ -23,17 +26,17 @@ function Snowman({ count }){
                     r="32" 
                     fill="#fff"
                     stroke="#335693"
-                    stroke-width="3"
+                    strokeWidth="3"
                 />
 
-                {/* Head / Body */}
+                Head / Body
                 <circle 
                     cx ="0" 
                     cy="-28" 
                     r="25" 
                     fill="#fff"
                     stroke="#335693"
-                    stroke-width="3"
+                    strokeWidth="3"
                 />
 
                 {/* RIGHT Arm */}
@@ -55,14 +58,13 @@ function Snowman({ count }){
                 />
 
                 {/* FACE */}
-                {/* Left Eye */}
+                / {/* Left Eye */}
                 <circle 
                     cx ="-7" 
                     cy="-37" 
                     r="4" 
                     fill="#000"
                 />
-                {/*  Right Eye*/}
                 <circle 
                     cx ="8" 
                     cy="-37" 
