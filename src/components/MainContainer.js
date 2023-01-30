@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from 'react'
-import Word from "./components/Word";
-import LetterBank from "./components/LetterBank";
-import Snowman from "./components/Snowman";
-import WrongLetterBank from "./components/WrongLetterBank";
+import Word from "./Word";
+import LetterBank from "./LetterBank";
+import Snowman from "./Snowman";
+import WrongLetterBank from "./WrongLetterBank";
 
 function MainContainer(){
 
