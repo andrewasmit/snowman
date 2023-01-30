@@ -19,7 +19,7 @@ function Word({ word, selectedLetters, setWin, count, setLose }){
             setWin(true)
         };
 
-        if(count ===6){
+        if(count ===8){
             setLose(true)
         }
     };
@@ -28,9 +28,9 @@ function Word({ word, selectedLetters, setWin, count, setLose }){
     function renderUnderscores(){
         setLetterUnderscores(wordArr.map((letter, i)=>{
             if(selectedLetters.includes(wordArr[i].toUpperCase())){
-                 return <h3 key={i} className="display-letter">{letter.toUpperCase()}</h3>
+                 return <h1 key={i} className="display-letter">{letter.toUpperCase()}</h1>
              } else
-                 return <h3 key={i} className="display-letter">__</h3>
+                 return <h1 key={i} className="display-letter">__</h1>
          }))
     };
 
