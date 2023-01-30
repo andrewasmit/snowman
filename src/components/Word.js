@@ -5,6 +5,23 @@ function Word({ word, selectedLetters, setWin }){
     const wordArr= word.split('')
     const [letterUnderscores, setLetterUnderscores] = useState([]);
 
+    function checkForWin(){
+        const checkArr = letterUnderscores.map(e=>{
+            if(e.props.children === "__"){
+                return "NO";
+            } else {
+                return e.props.children;
+            }
+        })
+        console.log(checkArr)
+        if(checkArr.includes("NO") || checkArr.length===0){
+            console.log("No win yet")
+        }else{
+            setWin(true)
+        }
+    };
+
+
     function renderUnderscores(){
         setLetterUnderscores(wordArr.map((letter, i)=>{
             if(selectedLetters.includes(wordArr[i].toUpperCase())){
@@ -15,15 +32,10 @@ function Word({ word, selectedLetters, setWin }){
     };
 
     useEffect(()=>{ renderUnderscores() }, [selectedLetters, word])
+    useEffect(()=>{ checkForWin(); }, [letterUnderscores])
 
-    function checkForWin(){
-        if(letterUnderscores.includes("__")){
-            return false
-        } else
-        setWin(true)
-    }
-console.log(letterUnderscores)
-    useEffect(()=>{ checkForWin() }, [selectedLetters, word])
+    
+
 
 
     // Return of JSX
