@@ -48,7 +48,7 @@ function LetterBank({
     // Return of JSX
     return(
         <div id="letter-bank">
-            <h4>Letter Bank</h4>
+            <h2>Letter Bank</h2>
             {lettersToDisplay}
         </div>
     )
