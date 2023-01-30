@@ -14,22 +14,21 @@ function App() {
   const [lose, setLose] = useState(false)
 
   useEffect(()=>{
-    const options = {
+  const options = {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': 'f210eecfb5mshfc612e739004a93p1bdbcbjsn591e5976f5cf',
-      'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+      'X-RapidAPI-Host': 'random-word-by-api-ninjas.p.rapidapi.com'
     }
   };
   
-  fetch('https://wordsapiv1.p.rapidapi.com/words/?random=true', options)
-    .then(res => res.json())
+  fetch('https://random-word-by-api-ninjas.p.rapidapi.com/v1/randomword', options)
+    .then(response => response.json())
     .then(data => setWord(data.word))
     .catch(err => console.error(err));
   }, []);
 
-  console.log(win)
-  console.log(lose)
+  console.log(word)
 
   // return of JSX
   return (
