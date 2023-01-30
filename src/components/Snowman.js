@@ -7,8 +7,25 @@ function Snowman({ count }){
         <div id='snowman'className="split-screen">
             <h3>{count} wrong guesses</h3>
             <svg width="300" height="300" viewBox="-100 -100 200 200">
+            
+                <g id="tree">
+                    <polygon points="-10, 0 10, 0 0 -50" fill="#38755b"/>
+                    <line 
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="10"
+                        stroke="#778074"
+                        strokeWidth="4"
+                    />
+                </g>
+                <rect x="-100" y="-100" width="300" height="300" fill="#f1dac3" />
+                <circle cx="0" cy="380" r="350" fill="#f8f4e8" />
 
-                {/* Lowest Body */}
+                <use href="#tree" x="-40" y="10" transform="scale(2)"/> 
+                <use href="#tree" x="30" y="30" transform="scale(2.5)"/> 
+
+            {/* Lowest Body */}
             { count >= 1 ? 
                 <circle 
                     cx ="0" 
@@ -20,7 +37,7 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* Middle Body */}
+            {/* Middle Body */}
             { count >=2 ?
                 <circle 
                     cx ="0" 
@@ -32,7 +49,7 @@ function Snowman({ count }){
                 /> : null 
             }
 
-                {/* Head / Body */}
+            {/* Head / Body */}
             { count >= 3 ?
                 <circle 
                     cx ="0" 
@@ -44,7 +61,7 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* RIGHT Arm */}
+            {/* RIGHT Arm */}
             { count >= 4 ?
                 <rect 
                     x="20" 
@@ -55,7 +72,7 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* LEFT Arm */}
+            {/* LEFT Arm */}
             { count >=5 ?
                 <rect 
                     x="-60" 
@@ -66,8 +83,8 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* FACE */}
-                {/* Left Eye */}
+            {/* FACE */}
+            {/* Left Eye */}
             { count >=6 ?
                 <circle 
                     cx ="-7" 
@@ -85,7 +102,7 @@ function Snowman({ count }){
                 /> :null
             }
             
-                {/* Mouth 4 */}
+            {/* Mouth 4 */}
             { count >=6 ?
                 <circle 
                     cx ="15" 
@@ -95,7 +112,7 @@ function Snowman({ count }){
                 />:null
             }
 
-                {/* Mouth 3 */}
+            {/* Mouth 3 */}
             { count >=6 ?
                 <circle 
                     cx ="7" 
@@ -105,7 +122,7 @@ function Snowman({ count }){
                 />: null
             }
 
-                {/* Mouth 2 */}
+            {/* Mouth 2 */}
             { count >=6 ?
                 <circle 
                     cx ="-2" 
@@ -115,7 +132,7 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* Mouth 1 */}
+            {/* Mouth 1 */}
             { count >=6 ?
                 <circle 
                     cx ="-11.5" 
@@ -125,7 +142,7 @@ function Snowman({ count }){
                 /> : null
             }
 
-                {/* Carrot Nose */}
+            {/* Carrot Nose */}
             { count >=7 ?
                 <polygon 
                     points="-2, -22 0, -27 40, -26 "
@@ -133,7 +150,7 @@ function Snowman({ count }){
                 /> :null
             }
 
-                {/* Top hat/Bottom */}
+            {/* Top hat/Bottom */}
             { count >=8 ?
                 <rect 
                     x="-30" 
@@ -143,7 +160,7 @@ function Snowman({ count }){
                     fill="#000" 
                 /> : null
             }
-                {/* Top hat/TOP */}
+            {/* Top hat/TOP */}
             { count >=8 ?
                 <rect 
                     x="-18" 

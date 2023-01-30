@@ -28,7 +28,7 @@ const [chosen, setChosen] = useState(false)
     // Return of JSX
     return(
         <div id={letter} className={ chosen ? answer : "default-letter"} onClick={win || lose ? null : handleClickLetter}>
-            <h3>{letter}</h3>
+            <h1>{letter}</h1>
         </div>
     )
 }
