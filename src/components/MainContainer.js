@@ -4,7 +4,7 @@ import Word from "./Word";
 import LetterBank from "./LetterBank";
 import Snowman from "./Snowman";
 import WrongLetterBank from "./WrongLetterBank";
-import Win from "./Win";
+import Popup from "./Popup";
 
 function MainContainer({ score, setScore }){
 
@@ -53,7 +53,7 @@ useEffect(()=>{
   //   Return of JSX
     return(
         <div id="main-container">
-           <Win trigger={win || lose} startNewGame={startNewGame} win={win}/>
+           <Popup trigger={win || lose} startNewGame={startNewGame} win={win}/>
            <Word 
                 word={word} 
                 selectedLetters={selectedLetters} 

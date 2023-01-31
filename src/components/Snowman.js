@@ -5,7 +5,7 @@ function Snowman({ count, wrongLetters }){
 
     return(
         <div id='snowman'className="split-screen">
-            <h3>{wrongLetters.length} wrong guesses</h3>
+            
             <svg width="300" height="300" viewBox="-100 -100 200 200">
             
                 <g id="tree">
@@ -103,7 +103,7 @@ function Snowman({ count, wrongLetters }){
             }
             
             {/* Mouth 4 */}
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="15" 
                     cy="-17" 
@@ -172,6 +172,7 @@ function Snowman({ count, wrongLetters }){
             }
                 
             </svg>
+            {wrongLetters.length >0 ? <p>Only {8 - wrongLetters.length} incorrect guesses left...</p> : <h1></h1> }
         </div>
     )
 }

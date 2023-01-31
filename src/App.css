@@ -64,6 +64,9 @@ body {
   grid-column: 1;
   grid-row: 3;
 }
+#snowman svg{
+  padding-top: 50px;
+}
 
 #wrong-letter-bank{
   height: 400px;
@@ -73,7 +76,7 @@ body {
 
 #letter-bank{
   margin: 0;
-  padding: 0;
+  padding-top: 100px;
   background-color: #d5eae8;
   grid-column-end: span 2;
   grid-row: 4;

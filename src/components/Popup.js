@@ -1,7 +1,8 @@
 import React from 'react'
+import { useEffect } from 'react'
 import './Popup.css'
 
-function Win(props) {
+function Popup(props) {
 
     // Return of JSX
   return (props.trigger) ? (
@@ -14,4 +15,6 @@ function Win(props) {
   ) : null;
 }
 
-export default Win;
+export default Popup;
+
+
