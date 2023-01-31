@@ -4,16 +4,18 @@ import Word from "./Word";
 import LetterBank from "./LetterBank";
 import Snowman from "./Snowman";
 import WrongLetterBank from "./WrongLetterBank";
+import Win from "./Win";
 
-function MainContainer(){
+function MainContainer({ score, setScore }){
 
   const [word, setWord] = useState('');
-  const [count, setCount] = useState(0);
   const [selectedLetters, setSelectedLetters] = useState([]);
   const [win, setWin] = useState(false)
   const [lose, setLose] = useState(false)
+  const [wrongLetters, setWrongLetters] = useState([]);
+  const [gamesPlayed, setGamesPlayed] = useState(0);
 
-  useEffect(()=>{
+useEffect(()=>{
   const options = {
     method: 'GET',
     headers: {
@@ -26,38 +28,52 @@ function MainContainer(){
     .then(response => response.json())
     .then(data => setWord(data.word))
     .catch(err => console.error(err));
-  }, []);
+  }, [gamesPlayed]);
 
-
-  const [wrongLetters, setWrongLetters] = useState([]);
+  
 
   function handleDisplayWrongLetters(letter){
       setWrongLetters([...wrongLetters, letter])
   };
 
-//   Return of JSX
+  function startNewGame(){
+    setGamesPlayed(gamesPlayed +1);
+    if(win === true){
+      setScore(score +25);
+    } else {
+      setScore(score+ 5)
+    }
+    setLose(false);
+    setWin(false);
+    setSelectedLetters([]);
+    setWrongLetters([]);
+  }
+
+
+  //   Return of JSX
     return(
         <div id="main-container">
+           <Win trigger={win || lose} startNewGame={startNewGame} win={win}/>
            <Word 
                 word={word} 
                 selectedLetters={selectedLetters} 
                 setWin={setWin}
-                count={count}
                 setLose={setLose}
                 wrongLetters={wrongLetters}
             />
-            <Snowman count={count} wrongLetters={wrongLetters}/>
+            <Snowman wrongLetters={wrongLetters}/>
             <WrongLetterBank wrongLetters={wrongLetters} />
             <LetterBank 
                 win={win}
                 lose={lose}
                 word={word} 
-                count={count} 
-                setCount={setCount} 
                 wrongLetters={wrongLetters}
                 selectedLetters={selectedLetters} 
                 setSelectedLetters={setSelectedLetters}
                 handleDisplayWrongLetters={handleDisplayWrongLetters}
+                score={score}
+                setScore={setScore}
+                gamesPlayed={gamesPlayed}
             />
         </div>
     )

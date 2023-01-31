@@ -9,7 +9,10 @@ function LetterBank({
         setSelectedLetters, 
         win,
         lose,
-        handleDisplayWrongLetters
+        handleDisplayWrongLetters,
+        score,
+        setScore,
+        gamesPlayed
     }){
 
         
@@ -26,6 +29,9 @@ function LetterBank({
                         setSelectedLetters={setSelectedLetters}
                         win={win}
                         lose={lose}
+                        score={score}
+                        setScore={setScore}
+                        gamesPlayed={gamesPlayed}
                     />
         }else
             return <Letter 
@@ -38,6 +44,9 @@ function LetterBank({
                         setSelectedLetters={setSelectedLetters}
                         win={win}
                         lose={lose}
+                        score={score}
+                        setScore={setScore}
+                        gamesPlayed={gamesPlayed}
                     />
     })
 

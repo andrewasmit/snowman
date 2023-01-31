@@ -37,7 +37,7 @@ function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
     };
 
     useEffect(()=>{ renderUnderscores() }, [selectedLetters, word])
-    useEffect(()=>{ checkForWinLoss(); }, [letterUnderscores])
+    useEffect(()=>{ checkForWinLoss() }, [letterUnderscores])
 
     
     // Return of JSX

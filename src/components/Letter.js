@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Letter({ 
         letter, 
@@ -7,18 +7,28 @@ function Letter({
         selectedLetters, 
         setSelectedLetters, 
         win,
-        lose
+        lose,
+        score,
+        setScore,
+        gamesPlayed
      }){
 
-const [chosen, setChosen] = useState(false)
+    const [chosen, setChosen] = useState(false)
 
     function handleClickLetter(){
         setChosen(true)
         if (answer === "red-letter"){
             handleDisplayWrongLetters(letter)
+            setScore(score-=5)
+        } else{
+            setScore(score+=7)
         }
         setSelectedLetters([...selectedLetters, letter])
     }
+
+    useEffect(()=>{
+        setChosen(false)
+    }, [gamesPlayed]);
 
 
     // Return of JSX
