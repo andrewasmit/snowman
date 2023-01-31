@@ -1,11 +1,11 @@
 
 
-function Snowman({ count }){
+function Snowman({ count, wrongLetters }){
 
 
     return(
         <div id='snowman'className="split-screen">
-            <h3>{count} wrong guesses</h3>
+            <h3>{wrongLetters.length} wrong guesses</h3>
             <svg width="300" height="300" viewBox="-100 -100 200 200">
             
                 <g id="tree">
@@ -26,7 +26,7 @@ function Snowman({ count }){
                 <use href="#tree" x="30" y="30" transform="scale(2.5)"/> 
 
             {/* Lowest Body */}
-            { count >= 1 ? 
+            { wrongLetters.length >= 1 ? 
                 <circle 
                     cx ="0" 
                     cy="55" 
@@ -38,7 +38,7 @@ function Snowman({ count }){
             }
 
             {/* Middle Body */}
-            { count >=2 ?
+            { wrongLetters.length >=2 ?
                 <circle 
                     cx ="0" 
                     cy="12" 
@@ -50,7 +50,7 @@ function Snowman({ count }){
             }
 
             {/* Head / Body */}
-            { count >= 3 ?
+            { wrongLetters.length >= 3 ?
                 <circle 
                     cx ="0" 
                     cy="-28" 
@@ -62,7 +62,7 @@ function Snowman({ count }){
             }
 
             {/* RIGHT Arm */}
-            { count >= 4 ?
+            { wrongLetters.length >= 4 ?
                 <rect 
                     x="20" 
                     y="8" 
@@ -73,7 +73,7 @@ function Snowman({ count }){
             }
 
             {/* LEFT Arm */}
-            { count >=5 ?
+            { wrongLetters.length >=5 ?
                 <rect 
                     x="-60" 
                     y="8" 
@@ -85,7 +85,7 @@ function Snowman({ count }){
 
             {/* FACE */}
             {/* Left Eye */}
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="-7" 
                     cy="-37" 
@@ -93,7 +93,7 @@ function Snowman({ count }){
                     fill="#000"
                 /> : null
             }
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="8" 
                     cy="-37" 
@@ -113,7 +113,7 @@ function Snowman({ count }){
             }
 
             {/* Mouth 3 */}
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="7" 
                     cy="-13.5" 
@@ -123,7 +123,7 @@ function Snowman({ count }){
             }
 
             {/* Mouth 2 */}
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="-2" 
                     cy="-12" 
@@ -133,7 +133,7 @@ function Snowman({ count }){
             }
 
             {/* Mouth 1 */}
-            { count >=6 ?
+            { wrongLetters.length >=6 ?
                 <circle 
                     cx ="-11.5" 
                     cy="-15" 
@@ -143,7 +143,7 @@ function Snowman({ count }){
             }
 
             {/* Carrot Nose */}
-            { count >=7 ?
+            { wrongLetters.length >=7 ?
                 <polygon 
                     points="-2, -22 0, -27 40, -26 "
                     fill="#fa1"
@@ -151,7 +151,7 @@ function Snowman({ count }){
             }
 
             {/* Top hat/Bottom */}
-            { count >=8 ?
+            { wrongLetters.length >=8 ?
                 <rect 
                     x="-30" 
                     y="-55" 
@@ -161,7 +161,7 @@ function Snowman({ count }){
                 /> : null
             }
             {/* Top hat/TOP */}
-            { count >=8 ?
+            { wrongLetters.length >=8 ?
                 <rect 
                     x="-18" 
                     y="-75" 

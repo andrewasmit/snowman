@@ -44,8 +44,9 @@ function MainContainer(){
                 setWin={setWin}
                 count={count}
                 setLose={setLose}
+                wrongLetters={wrongLetters}
             />
-            <Snowman count={count}/>
+            <Snowman count={count} wrongLetters={wrongLetters}/>
             <WrongLetterBank wrongLetters={wrongLetters} />
             <LetterBank 
                 win={win}
@@ -53,6 +54,7 @@ function MainContainer(){
                 word={word} 
                 count={count} 
                 setCount={setCount} 
+                wrongLetters={wrongLetters}
                 selectedLetters={selectedLetters} 
                 setSelectedLetters={setSelectedLetters}
                 handleDisplayWrongLetters={handleDisplayWrongLetters}

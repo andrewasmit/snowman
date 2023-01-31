@@ -4,8 +4,7 @@ const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p
 
 function LetterBank({ 
         word, 
-        count, 
-        setCount, 
+        wrongLetters, 
         selectedLetters, 
         setSelectedLetters, 
         win,
@@ -21,8 +20,7 @@ function LetterBank({
                         letter={e.toUpperCase()} 
                         key={i} 
                         answer="green-letter" 
-                        count={count}
-                        setCount={setCount}
+                        wrongLetters={wrongLetters}
                         handleDisplayWrongLetters={handleDisplayWrongLetters}
                         selectedLetters={selectedLetters} 
                         setSelectedLetters={setSelectedLetters}
@@ -34,8 +32,7 @@ function LetterBank({
                         letter={e.toUpperCase()} 
                         key={i} 
                         answer="red-letter" 
-                        count={count}
-                        setCount={setCount}
+                        wrongLetters={wrongLetters}
                         handleDisplayWrongLetters={handleDisplayWrongLetters}
                         selectedLetters={selectedLetters} 
                         setSelectedLetters={setSelectedLetters}

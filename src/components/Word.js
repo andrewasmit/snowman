@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
 
-function Word({ word, selectedLetters, setWin, count, setLose }){
+function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
 
     const wordArr= word.split('')
     const [letterUnderscores, setLetterUnderscores] = useState([]);
@@ -14,13 +14,15 @@ function Word({ word, selectedLetters, setWin, count, setLose }){
             }
         })
         if(checkArr.includes("NO") || checkArr.length===0){
-            // console.log("No win yet")
+            console.log("No win yet")
         }else{
             setWin(true)
+            console.log("WINNER!")
         };
 
-        if(count ===8){
+        if(wrongLetters.length ===8){
             setLose(true)
+            console.log("You Lose!")
         }
     };
 
