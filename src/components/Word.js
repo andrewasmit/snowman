@@ -43,7 +43,7 @@ function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
     // Return of JSX
     return(
         <div id="word">
-            <h1>The answer is: "{word.toUpperCase()}"</h1>
+            {/* <h1>The answer is: "{word.toUpperCase()}"</h1> */}
             {letterUnderscores}
         </div>
     )
