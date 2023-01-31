@@ -12,15 +12,37 @@ body {
   text-align: center;
 }
 
-.App-header {
+#App-header {
   background-color: #282000;
   min-height: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 1;
+
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 20px;
+}
+
+#title{
+  grid-column: 2;
+  grid-row: 1;
+  padding: 15px;
+  margin: 0;
+}
+
+#App-header img{
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#scoreboard{
+  color:#ecedd5;
+  grid-column: 3;
+  grid-row: 1;
+  margin: 0;
+  padding-top: 30px;
 }
 
 #main-container{
@@ -31,7 +53,7 @@ body {
 }
 
 #word{
-  /* background-color: azure; */
+  background-color: azure;
   grid-column-end: span 2;
   grid-row: 2;
   padding-top: 10px;
@@ -39,15 +61,11 @@ body {
 }
 
 #snowman{
-  /* border: 5px solid blue; */
-  /* width: 48%; */
   grid-column: 1;
   grid-row: 3;
 }
 
 #wrong-letter-bank{
-  /* border: 5px solid blue; */
-  /* width: 98%; */
   height: 400px;
   grid-column: 2;
   grid-row: 3;
