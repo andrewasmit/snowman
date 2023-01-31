@@ -1,6 +1,6 @@
 # Snowman
 
-## 
+## A Holiday-Themed Word-Guessing Game
 
 ### Getting Started
 

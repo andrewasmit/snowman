@@ -6,7 +6,7 @@ import Snowman from "./Snowman";
 import WrongLetterBank from "./WrongLetterBank";
 import Popup from "./Popup";
 
-function MainContainer({ score, setScore }){
+function MainContainer({ score, setScore, highScore, setHighScore }){
 
   const [word, setWord] = useState('');
   const [selectedLetters, setSelectedLetters] = useState([]);
@@ -38,10 +38,14 @@ useEffect(()=>{
 
   function startNewGame(){
     setGamesPlayed(gamesPlayed +1);
-    if(win === true){
-      setScore(score +25);
-    } else {
-      setScore(score+ 5)
+    if(win === true && score > highScore){
+      setScore(score + 10);
+      setHighScore(score)
+    } else if(win===true && score < highScore){
+      setScore(score +5)
+    }
+    else {
+      setScore(0)
     }
     setLose(false);
     setWin(false);
@@ -53,7 +57,14 @@ useEffect(()=>{
   //   Return of JSX
     return(
         <div id="main-container">
-           <Popup trigger={win || lose} startNewGame={startNewGame} win={win}/>
+           <Popup 
+                trigger={win || lose} 
+                startNewGame={startNewGame} 
+                win={win} 
+                score={score}
+                word={word}
+                highScore={highScore}
+            />
            <Word 
                 word={word} 
                 selectedLetters={selectedLetters} 

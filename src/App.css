@@ -44,6 +44,13 @@ body {
   margin: 0;
   padding-top: 30px;
 }
+#high-score{
+  color:#ecedd5;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding-top: 30px;
+}
 
 #main-container{
   margin:0;
