@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/snowman/static/css/main.ba5fbb94.css",
+    "main.js": "/snowman/static/js/main.c163c6fb.js",
+    "index.html": "/snowman/index.html",
+    "main.ba5fbb94.css.map": "/snowman/static/css/main.ba5fbb94.css.map",
+    "main.c163c6fb.js.map": "/snowman/static/js/main.c163c6fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba5fbb94.css",
+    "static/js/main.c163c6fb.js"
+  ]
+}
