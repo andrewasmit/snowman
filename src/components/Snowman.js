@@ -1,11 +1,12 @@
-
+import { Grid, Typography } from "@mui/material";
 
 function Snowman({ count, wrongLetters }){
 
 
     return(
         <div id='snowman'className="split-screen">
-            
+        <Grid container >
+            <Grid item xs={12}>
             <svg width="300" height="300" viewBox="-100 -100 200 200">
             
                 <g id="tree">
@@ -172,7 +173,12 @@ function Snowman({ count, wrongLetters }){
             }
                 
             </svg>
-            {wrongLetters.length >0 ? <p>Only {8 - wrongLetters.length} incorrect guesses left...</p> : <h1></h1> }
+            </Grid>
+            <Grid item xs={12} >
+                {wrongLetters.length >0 ? <Typography variant="p" component="p">Only {8 - wrongLetters.length} incorrect {8-wrongLetters.length === 1 ? "guess" : "guesses" } left...</Typography> 
+                : <Typography variant="p" component="p"></Typography> }
+            </Grid>
+        </Grid>
         </div>
     )
 }

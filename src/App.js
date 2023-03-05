@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react'
 import Header from './components/Header';
 import MainContainer from './components/MainContainer';
+import { Container, Grid } from '@mui/system';
 
 function App() {
 
@@ -10,10 +11,10 @@ function App() {
 
 
   return (
-    <div className="App">
+    <Container className="App">
       <Header score={score} setScore={setScore} highScore={highScore}/>
       <MainContainer score={score} setScore={setScore} highScore={highScore} setHighScore={setHighScore}/>
-    </div>
+    </Container>
   );
 }
 

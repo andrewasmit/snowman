@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 
 function Letter({ 
@@ -34,7 +35,7 @@ function Letter({
     // Return of JSX
     return(
         <div id={letter} className={ chosen ? answer : "default-letter"} onClick={win || lose ? null : handleClickLetter}>
-            <h1>{letter}</h1>
+            <Typography variant="h4" component="h4">{letter}</Typography>
         </div>
     )
 }

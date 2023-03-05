@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import Letter from "./Letter";
 
 const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -54,7 +55,7 @@ function LetterBank({
     // Return of JSX
     return(
         <div id="letter-bank">
-            <h2>Letter Bank</h2>
+            <Typography variant="h3" component="h4">Letter Bank</Typography>
             {lettersToDisplay}
         </div>
     )

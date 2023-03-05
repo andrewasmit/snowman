@@ -1,4 +1,5 @@
 import {useEffect, useState } from 'react'
+import { Typography } from '@mui/material';
 
 function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
 
@@ -7,7 +8,7 @@ function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
 
     function checkForWinLoss(){
         const checkArr = letterUnderscores.map(e=>{
-            if(e.props.children === "__"){
+            if(e.props.children === "__ "){
                 return "NO";
             } else {
                 return e.props.children;
@@ -30,9 +31,9 @@ function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
     function renderUnderscores(){
         setLetterUnderscores(wordArr.map((letter, i)=>{
             if(selectedLetters.includes(wordArr[i].toUpperCase())){
-                 return <h1 key={i} className="display-letter">{letter.toUpperCase()}</h1>
+                 return <Typography variant="h4" component="h3" key={i} className="display-letter">{letter.toUpperCase()}</Typography>
              } else
-                 return <h1 key={i} className="display-letter">__</h1>
+                 return <Typography variant="h4" component="h3" key={i} className="display-letter">__ </Typography>
          }))
     };
 
@@ -43,7 +44,6 @@ function Word({ word, selectedLetters, setWin, wrongLetters, setLose }){
     // Return of JSX
     return(
         <div id="word">
-            {/* <h1>The answer is: "{word.toUpperCase()}"</h1> */}
             {letterUnderscores}
         </div>
     )

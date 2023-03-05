@@ -5,6 +5,7 @@ import LetterBank from "./LetterBank";
 import Snowman from "./Snowman";
 import WrongLetterBank from "./WrongLetterBank";
 import Popup from "./Popup";
+import { Grid, Typography } from "@mui/material";
 
 function MainContainer({ score, setScore, highScore, setHighScore }){
 
@@ -57,6 +58,7 @@ useEffect(()=>{
   //   Return of JSX
     return(
         <div id="main-container">
+        <Grid container >
            <Popup 
                 trigger={win || lose} 
                 startNewGame={startNewGame} 
@@ -65,6 +67,7 @@ useEffect(()=>{
                 word={word}
                 highScore={highScore}
             />
+          <Grid item xs={12}>
            <Word 
                 word={word} 
                 selectedLetters={selectedLetters} 
@@ -72,8 +75,14 @@ useEffect(()=>{
                 setLose={setLose}
                 wrongLetters={wrongLetters}
             />
+          </Grid>
+          <Grid item xs={12} md={6} >
             <Snowman wrongLetters={wrongLetters}/>
+          </Grid>
+          <Grid item xs={12} md={6} >
             <WrongLetterBank wrongLetters={wrongLetters} />
+          </Grid>
+          <Grid item xs={12} >
             <LetterBank 
                 win={win}
                 lose={lose}
@@ -86,6 +95,8 @@ useEffect(()=>{
                 setScore={setScore}
                 gamesPlayed={gamesPlayed}
             />
+          </Grid>
+        </Grid>
         </div>
     )
 };
