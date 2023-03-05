@@ -4,7 +4,7 @@ import { Typography, Container, Grid } from '@mui/material';
 
 function Header({ score, highScore }) {
   return (
-    <Container id="App-header">
+    <Container id="App-header" maxWidth >
     <Grid container >
       <Grid item xs={12} md={3}>
         <Typography variant='h6' component="h6" id ="high-score">HIGH SCORE: {highScore}</Typography>

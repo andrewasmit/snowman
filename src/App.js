@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <Container className="App">
+    <Container className="App" maxWidth >
       <Header score={score} setScore={setScore} highScore={highScore}/>
       <MainContainer score={score} setScore={setScore} highScore={highScore} setHighScore={setHighScore}/>
     </Container>
