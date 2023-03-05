@@ -10,5 +10,5 @@ In your terminal, run ```npm install && npm start``` . This will download all th
 This is a Single-Page Application that provides a kid-friendly alternative to a popular word-guessing game. 
 
 ### Project Details
-This project is built with ReactJS and is styled with vanilla CSS. 
+This project is built with ReactJS and is styled with vanilla CSS and Material UI. 
 
